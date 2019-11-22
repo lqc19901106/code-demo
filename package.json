@@ -1,0 +1,25 @@
+{
+  "name": "code-incubator",
+  "version": "1.0.0",
+  "description": "code interview common code demo manual",
+  "workspaces": [
+    "packages/*"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "keywords": [
+    "code",
+    "review",
+    "interview",
+    "demo"
+  ],
+  "author": "liuqichao",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "gulp": "^4.0.2",
+    "gulp-connect": "^5.7.0"
+  }
+}

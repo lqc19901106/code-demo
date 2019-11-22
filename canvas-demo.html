@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html5 canvas</title>
+    <style>
+        #sketch-pad{
+            width: 600px;
+            height:600px;
+        }
+        #sketch-pad canvas{
+            width: 100%;
+            height:100%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id='sketch-pad'>
+        <canvas id='sketch'></canvas>
+    </div>
+    <script>
+
+        var canvas = document.getElementById('sketch');
+        var defalutCanvasConfig = {};
+        if(canvas.getContext){
+            var ctx = canvas.getContext('2d');
+            for (const key in ctx) {
+                if (['number', 'string', 'boolean'].indexOf(typeof ctx[key]) > -1) {
+                    defalutCanvasConfig[key] = ctx[key];
+                }
+            }
+        }
+        function drawRect(ctx){
+            ctx.fillStyle = 'yellow';
+            ctx.strokeRect(0, 0, 100, 100); 
+            // ctx.strokeRect(50,50,200,100); 
+        }
+        drawRect(ctx);
+        canvas.onmousemove = function(evt){
+            const rect = evt.currentTarget.getBoundingClientRect();
+            if(evt.clientX - rect.x <= 100 && evt.clientY-rect.y <=100 ) {
+console.log(evt.clientX, evt.clientY);
+            }
+        }
+        console.log(defalutCanvasConfig);
+    </script>
+</body>
+</html>

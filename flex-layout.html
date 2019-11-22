@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>test flex</title>
+    <style>
+        :root{
+            font-size: 'Monospaced Number',"Chinese Quote",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-overflow-scrolling: touch;
+        }
+        .pages{
+            position: absolute;
+            top:0;
+            left:0;
+            bottom: 0;
+            right:0;
+            height: 100%;
+            width: 100%;
+            display:flex;
+            flex-direction: column;
+        }
+        header{
+            height:50px;
+            width: 100%;
+        }
+        main{
+            flex: 1;
+            display: flex;
+        }
+        .left-side{
+            display: flex;
+            flex:1;
+            height: 100%;
+        }
+        .toolbar{
+            width: 60px;
+            background-color: azure;
+        }
+        .toolbar:active{
+            width: 222px;
+        }
+        .picture{
+            flex: 1;
+            background-color: aqua;
+        }
+        .summary{
+            width: 478px;
+            background-color: bisque;
+        }
+        footer{
+            height: 50px;
+        }
+        @media screen and (max-width: 700px) {
+            main{
+                flex-direction: column;
+            }
+            .left-side{
+                flex:3;
+            }
+            .summary{
+                flex: 2;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class='pages'>
+        <header>
+            <div class="custom-notice">
+                <i class="icon-notice"></i>
+                <marquee class="noticeText ng-binding" direction="left" behavior="alternate" scrollamount="100" scrolldelay="1000" loop="5" width="100%" onmouseover="this.stop();" onmouseout="this.start();"  style="width: 100%;">充值公告：首充100送1元</marquee>
+            </div>
+            <div class='logo'>
+                logo
+            </div>
+            <div class='tab-header'>
+                tab
+            </div>
+            <div class='global-toolbar'>
+                toolbar
+            </div>
+        </header>
+        <main>
+            <div class="left-side">
+                <div class="toolbar">
+                        toolbar
+                </div>
+                <div class="picture">
+                    dicom
+                </div>
+            </div>
+            <div class="summary">
+                summary
+            </div>
+        </main>
+        <footer>
+            footer
+        </footer>
+    </div>
+</body>
+</html>

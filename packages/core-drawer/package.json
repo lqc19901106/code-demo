@@ -1,0 +1,16 @@
+{
+  "name": "core-drawer",
+  "version": "1.0.0",
+  "description": "core drawer",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "core",
+    "function",
+    "draw"
+  ],
+  "author": "liuqichao",
+  "license": "MIT"
+}
